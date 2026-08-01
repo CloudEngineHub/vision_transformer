@@ -65,9 +65,9 @@ def main(argv):
                                        _WORKDIR.value, 'workdir')
 
   if FLAGS.config.trainer == 'train':
-    train.train_and_evaluate(FLAGS.config, _WORKDIR.value)
+    train.train_and_evaluate(FLAGS.config, _WORKDIR.value)  # pyrefly: ignore[bad-argument-type]
   elif FLAGS.config.trainer == 'inference_time':
-    inference_time.inference_time(FLAGS.config, _WORKDIR.value)
+    inference_time.inference_time(FLAGS.config, _WORKDIR.value)  # pyrefly: ignore[bad-argument-type]
   else:
     raise app.UsageError(f'Unknown trainer: {FLAGS.config.trainer}')
 
